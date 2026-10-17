@@ -1,0 +1,10 @@
+Demo push test - The Beat Drop product-listings repo
+
+Hi Karol! This file is just a test to show how changes get from Claude to GitHub:
+
+1. Claude makes or edits a file in the repo folder on the PC
+2. Claude commits it (saves a snapshot with a short note)
+3. Michael opens GitHub Desktop and clicks "Push origin"
+4. The change shows up here on GitHub for everyone
+
+Created 2026-10-17. Safe to delete.
