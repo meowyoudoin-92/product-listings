@@ -186,6 +186,15 @@ Variant options are **linked to metaobjects**, not typed as free text. Every liv
 
 ---
 
+## GitHub Sync
+
+- **Repo:** `meowyoudoin-92/product-listings` (public), branch `main`. This folder is the repo root.
+- **Commit and push after every change to the repo**: new or edited files, build summaries, `Platform_Reference.xlsx` updates, image additions. No need to ask first. One commit per update, with a short message saying what changed.
+- `.claude/`, `.DS_Store` and Office lock files (`~$*`) stay out via `.gitignore`.
+- Git push and `gh` need the macOS keychain, which the sandbox blocks, so run them outside the sandbox.
+
+---
+
 ## Pre-Handoff Checklist
 
 - [ ] Correct template for the line; body verbatim; only the documented slots changed
