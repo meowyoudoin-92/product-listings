@@ -92,17 +92,17 @@ Write like someone who's actually been in the crowd — not a brand trying to bo
 | "The Beat Drop" (in customer-facing copy) | — (omit; let the product speak) | Keeps every listing product-first, not brand-first |
 | "cheap," "knockoff" | — (omit; never substitute a synonym either) | Devalues a handmade, US-made product |
 | "devotees" | "fans" | Reads as stiff/formal, not raver-native |
-| "variants," "options" (customer-facing) | "colors," "multi-color" | Reads as e-commerce backend language, not community language |
+| "variants" for colors (customer-facing) | "colors," "multi-color" | Reads as e-commerce backend language, not community language. Template labels like "Color Options" are fine |
 | "fit" (customer-facing) | "outfit," "clothing" | "Fit" is fine internally but reads generic in copy |
-| Implying official artist merch/partnership | "fan-made," "fan-inspired" | Legal/IP boundary — never blur this |
+| Artist, festival or event names; implying official merch | A plain design description ("Pixel Skull") | Legal/IP boundary: listing copy stays generic |
 
 ---
 
 ## Visual & Sensory Identity
 
 - Product is small (~2×2 in) and tactile — copy should evoke touch and motion ("snaps onto," "clips in seconds," "holds through the whole set") over abstract adjectives.
-- Color is a merchandising axis, not just an attribute — colors are named and celebrated in copy (bullet 5 of the standard template exists specifically to showcase the color range).
-- Festival references anchor the product in real, current culture — but the *named* festivals in the standard template (Electric Forest, Lost Lands, Seven Stars) are fixed by design, not swapped per listing, so the brand reads as consistent across the whole catalog. Bundle listings aren't bound by this fixed list — they use whatever festivals fit that bundle's theme.
+- Color is a merchandising axis, not just an attribute: each single-design template has a `[Colors]` slot in its features list that names the listing's colors.
+- Listing copy is generic by design: the v2 templates name no artists, festivals or events, so the catalog reads consistently and stays clear of IP and marketplace-compliance issues. Festival culture comes through in general terms ("festival outfits," "trading with your rave crew").
 
 ---
 
@@ -112,8 +112,8 @@ TBD actually writes in two distinct voices depending on the content type. Know w
 
 | | Product listings (Shopify/Etsy/TikTok) | About pages, social, founder-voice content |
 |---|---|---|
-| **Point of view** | Third person ("this fan-made sprout," "ravers," "fans") | First person plural ("we," "us") — the founders speaking directly |
-| **Structure** | Locked, verbatim template (see `Gold_Standard_Sprout_Listing.docx` / `Gold_Standard_Sprout_Bundle_Listing.docx` / `Gold_Standard_Kandi_Charm_Listing.docx` / `Gold_Standard_Kandi_Bundle_Listing.docx`) — do not deviate | Open-ended storytelling — no fixed structure |
+| **Point of view** | Third person ("this rave sprout clip," "your rave crew") | First person plural ("we," "us") — the founders speaking directly |
+| **Structure** | Locked, verbatim template (see the four `Gold_Standard_*_Listing-v2.docx` files) — do not deviate | Open-ended storytelling — no fixed structure |
 | **Founder presence** | None — the product is the narrator | Front and center — founders are named (Monster Mike, Petri, Mr. Whiskerz, WubBin) |
 | **Where it shows up** | Every SKU description | Etsy "About" section, brand storytelling, social captions, email |
 
@@ -123,4 +123,4 @@ The failure mode to avoid: pulling the warmer, more personal About-page voice in
 
 ## What Good Looks Like
 
-`Gold_Standard_Sprout_Listing.docx` (single-design Sprout listings), `Gold_Standard_Sprout_Bundle_Listing.docx` (Sprout Bundle listings), `Gold_Standard_Kandi_Charm_Listing.docx` (Kandi Charm listings) and `Gold_Standard_Kandi_Bundle_Listing.docx` (Kandi Bundle listings) are the locked gold-standard references for tone, structure, and keyword integration. When in doubt about whether a line "sounds like The Beat Drop," compare it against those listings' rhythm and word choice before publishing.
+`Gold_Standard_Sprout_Listing-v2.docx` (single-design Sprout listings), `Gold_Standard_Sprout_Bundle_Listing-v2.docx` (Sprout Bundle listings), `Gold_Standard_Kandi_Charm_Listing-v2.docx` (Kandi Charm listings) and `Gold_Standard_Kandi_Bundle_Listing-v2.docx` (Kandi Bundle listings) are the locked gold-standard references for tone, structure, and keyword integration. When in doubt about whether a line "sounds like The Beat Drop," compare it against those listings' rhythm and word choice before publishing.
