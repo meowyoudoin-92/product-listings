@@ -1,6 +1,6 @@
 # The Beat Drop — Claude Operating Instructions (Shopify Listings)
 
-*Enforceable rulebook for every Shopify listing task. Read `the-beat-drop-brand-identity.md` first for the "why." Listing copy lives ONLY in the four gold-standard `.docx` files. This file holds structure, rules and process, never template wording. The owner (Karol) can override any rule for a single listing in the prompt.*
+*Enforceable rulebook for every Shopify listing task. Read `the-beat-drop-brand-identity.md` first for the "why." Listing copy lives ONLY in the four gold-standard `-v2.docx` files. This file holds structure, rules and process, never template wording. The owner (Karol) can override any rule for a single listing in the prompt.*
 
 ---
 
@@ -16,12 +16,12 @@
 
 1. **DRAFT only.** Never set ACTIVE, never publish. Claude drafts; a human publishes.
 2. **Never write "The Beat Drop"** in a title, description, SEO title, meta description or alt text.
-3. **Banned → required words (customer-facing):** "cheap"/"knockoff" → omit · "devotees" → "fans" · "variants"/"options" → "colors"/"multi-color" · "fit" → "outfit"/"clothing".
-4. **No disclaimer sentences, and never the word "official."** Sprout templates carry fan-made framing through word choice; Kandi templates intentionally don't mention it. Never add "not an official partnership with [Artist]" or anything implying licensed or official merch.
+3. **Banned → required words (customer-facing):** "cheap"/"knockoff" → omit · "devotees" → "fans" · "variants" (meaning colors) → "colors"/"multi-color" in Claude's own wording; template labels such as "Color Options" stay as written · "fit" → "outfit"/"clothing".
+4. **No artist, festival or event names in customer-facing copy** (title, description, SEO title, meta, alt text, tags). The templates are generic; the `[Design]` slot describes the artwork only. No disclaimer sentences, never the word "official," nothing implying licensed or official merch. The name in the prompt's first line is internal (Product Type, SKU code, Roster).
 5. **Copy is verbatim** from the correct `.docx`. Only the documented fill-in slots change.
 6. **The prompt beats the defaults.** If the prompt specifies a variant structure, price, inventory or code that differs from this file, build exactly what the prompt says.
 7. **Live SKUs beat convention.** If an existing live SKU conflicts with the SKU convention, match it. Never "fix" it silently.
-8. **Required from the prompt (no defaults exist):** the product line; the color-to-image map (Sprout, Kandi Charm) or featured image (bundles); prices for Sprout Bundles and Kandi Bundles; pack naming for Sprout Bundles; dimensions and weight for both Kandi lines. If any is missing, ask **once, up front, for the whole batch**. Never stop mid-build.
+8. **Required from the prompt (no defaults exist):** the product line; Design; Dimensions in inches (all four lines); the color-to-image map, which supplies `[Colors]` (Sprout, Kandi Charm), or the featured image (bundles); prices for Sprout Bundles and Kandi Bundles; pack naming for Sprout Bundles. A Design that contains an artist, festival or event name counts as missing. If any is missing, ask **once, up front, for the whole batch**. Never stop mid-build.
 9. **Everything else: don't block.** Use the documented default or Claude's own call, finish the build, and record the decision in the build summary and the Product Roster Notes column.
 
 ---
@@ -30,10 +30,10 @@
 
 | Line | Physical build | Template (`.docx`) | Category | Variant options |
 |---|---|---|---|---|
-| Sprout | Charm + K-Hole + Sprocket + metal spring clip, one design | `Gold_Standard_Sprout_Listing` | Hair Pins | Color + Pack Size |
-| Sprout Bundle | Same build, themed multi-design set, no colors | `Gold_Standard_Sprout_Bundle_Listing` | Hair Pins | Pack Size |
-| Kandi Charm | Clip-less charm with bead hole, one design | `Gold_Standard_Kandi_Charm_Listing` | Charms | Color + Pack Size |
-| Kandi Bundle | Clip-less charms, variety of designs, no colors | `Gold_Standard_Kandi_Bundle_Listing` | Charms | Pack Size |
+| Sprout | Charm + K-Hole + Sprocket + metal spring clip, one design | `Gold_Standard_Sprout_Listing-v2` | Hair Pins | Color + Pack Size |
+| Sprout Bundle | Same build, themed multi-design set, no colors | `Gold_Standard_Sprout_Bundle_Listing-v2` | Hair Pins | Pack Size |
+| Kandi Charm | Clip-less charm with K-Hole bead hole and Sprocket spring pocket, one design | `Gold_Standard_Kandi_Charm_Listing-v2` | Charms | Color + Pack Size |
+| Kandi Bundle | Same charm build, variety of designs, no colors | `Gold_Standard_Kandi_Bundle_Listing-v2` | Charms | Pack Size |
 
 **Product Type: Claude works it out.** Use the exact live spelling:
 - Kandi Charm or Kandi Bundle → `Kandi Beads`
@@ -50,53 +50,36 @@ State the choice in the build summary. `Rave Sprout` is a legacy type; never ass
 
 ## Description Format
 
-**Document label / title line.** The bold first line of each `.docx` is not body copy. On the Sprout templates it's a document label (e.g. "Zeds Dead Product Description"). On the Kandi templates it's the TikTok-compatible **product title** pattern (see Titles & SEO).
+All four `-v2` templates share one layout. The **Product Title** and **Description** labels are not copy: the line under Product Title is the title pattern (see Titles & SEO), and the body is everything under Description.
 
-### Sprout & Sprout Bundle
+**Body order (verbatim):** two intro paragraphs → **Features** heading + 5 bullets → **Product Details** heading + bullets → **Please Note:** paragraph → italic closing line.
 
-**Body order:** Hook → Intro (2 sentences) → 5 bullets → closing paragraph → CTA line. No signoff, no in-body headline. **Fixed:** bullets 1–4, the CTA line, the 5-bullet count.
+| Fill-in slot | Sprout | Sprout Bundle | Kandi Charm | Kandi Bundle |
+|---|---|---|---|---|
+| `[Colors]` | Color & Pack Options bullet: all colors incl. Multicolor (e.g. "Pink, Blue, White and Multicolor") | — | Color Options bullet: solid colors only (e.g. "Pink, Blue and White"); the template already says "including multicolor assortments" | — |
+| `[x] in x [x] in x [x] in` | Dimensions from the prompt | Dimensions from the prompt | Dimensions from the prompt | Dimensions from the prompt |
 
-| Fill-in slot | Sprout | Sprout Bundle |
-|---|---|---|
-| Name in hook / intro / closing | Artist | Bundle or festival name |
-| Headliner or audience in intro | — | Optional |
-| Bullet 5 | This listing's colors | Pack sizes |
-| Festivals in closing | **Fixed:** Electric Forest, Lost Lands, Seven Stars | Fit the theme |
-| Venue detail (e.g. "two tents over") | — | Adapt for non-camping events |
-
-- **Bold** all SEO keywords, plus "K-Hole" and "Sprocket." Primary focus keyword within the **first 160 characters** of the body.
-- **Research links** (optional): light venue or vibe details only. Never write a bio.
-
-### Kandi Charm & Kandi Bundle
-
-**Body order (verbatim):** intro paragraph → second paragraph → **Features** (4 bullets) → **Product Details** (5 bullets) → bold tagline → closing line → italic note. The artist or bundle name does **not** go into the body.
-
-| Fill-in slot | Kandi Charm | Kandi Bundle |
-|---|---|---|
-| Color Options bullet | This listing's colors + "Multi-Color" | — (no colors) |
-| Value Packs bullet | Pack numbers (e.g. 10-, 20-, or 30-Pack) | Pack numbers (e.g. 10-, 20-, or 30-piece packs) |
-| Dimensions | From the prompt | From the prompt ("Vary by design" if given) |
-| Weight | From the prompt | From the prompt |
-
-- Bold exactly what the `.docx` bolds (the headings and the tagline); the note is italic (`<p><em>…</em></p>`).
-- The "Includes: Kandi charms ONLY (no bracelet or string)" line stays verbatim. Title, meta, alt text and tags must never imply a bracelet is included. "Bracelet Bead" in the title means a bead for bracelets and is fine.
-
-**All lines:** HTML `<ul><li>` only, never manual bullet characters (●, •).
+- Everything else is fixed: pack sizes, weight (~ 6 g), bead hole, packaging, the Kandi "Includes:" line and the closing line.
+- Bold exactly what the `.docx` bolds (headings, bullet labels, "Please Note:"); the closing line is italic (`<p><em>…</em></p>`).
+- **Kandi:** the "Includes: Loose kandi charms only. Bracelet, string, and spring clip hardware not included." line stays verbatim. Title, meta and alt text must never imply a bracelet is included: no "kandi bracelet" in a Kandi title. "Bracelet Beads" in the title pattern is fine; "kandi bracelet" is fine as a tag.
+- **All lines:** HTML `<ul><li>` only, never manual bullet characters (●, •).
 
 ---
 
 ## Titles & SEO
 
+**`[Design]`** comes from the prompt: a plain description of the artwork (e.g. "Pixel Skull", "Halloween Mix"), never an artist, festival or event name.
+
 | Line | Product title (≤140) | SEO title (≤60) | Meta description (≤160) |
 |---|---|---|---|
-| Sprout | `[Artist] Rave Sprouts \| EDM Accessory \| Festival Gift \| [Color] [Color] [Color]` | `[Artist] Rave Sprouts \| EDM Festival Gift` | Primary keyword + color names |
-| Sprout Bundle | `[Name] Rave Sprout Bundle \| [Headliner] Festival Hair Clip Accessory Set \| Festival Gifts` | `[Name] Rave Sprout Bundle \| EDM Festival Gift` | Primary keyword + pack sizes |
-| Kandi Charm | `3D Printed [Artist] Rave Kandi Charm, Music Festival Bracelet Bead, DIY Kandi Jewelry Accessory` | `[Artist] Rave Kandi Charm \| 3D Printed Festival Bead` | Keyword + colors + "Charms only, no bracelet." |
-| Kandi Bundle | `[Name] Rave Kandi Bead Variety Bundle \| [X], [Y] & [Z]-Pack \| 3D Printed Festival Beads` | `[Name] Rave Kandi Bead Bundle \| 3D Printed Festival Beads` | Keyword + pack sizes + "Charms only, no bracelet." |
+| Sprout | The template's Product Title line with `[Design]` filled | `[Design] Rave Sprout Clips \| Festival Hat & Hair Accessory` | Design + "rave sprout clips" + colors + packs |
+| Sprout Bundle | The template's Product Title line with `[Design]` filled | `[Design] Rave Sprout Bundle \| Festival Hair & Hat Clips` | Design + "rave sprout bundle" + pack sizes |
+| Kandi Charm | The template's Product Title line with `[Design]` filled | `[Design] Rave Kandi Charms \| 3D Printed Festival Beads` | Design + "rave kandi charms" + colors + packs + "Charms only, no bracelet." |
+| Kandi Bundle | The template's Product Title line with `[Design]` filled | `[Design] Kandi Charm Bundle \| 3D Printed Festival Beads` | Design + "kandi charm bundle" + pack sizes + "Charms only, no bracelet." |
 
-- Kandi titles follow the bold first line of their `.docx`; if the `.docx` pattern changes, it wins over this table.
-- **SEO title over 60 characters:** Sprout lines drop `EDM ` first; Kandi lines drop `3D Printed ` first. **No headliner** for a Sprout Bundle: use `EDM` in that slot.
-- **Alt text:** `[Name] [design descriptor] rave sprout|rave kandi charm [color] — [brief descriptor]`. Bundles use the bundle name in place of the color. Never pack sizes. A photo showing a bracelet says "shown on a display bracelet (not included)."
+- If the `.docx` title pattern changes, it wins over this table.
+- **Over a limit:** SEO titles drop `3D Printed ` (Kandi) or `Festival ` (Sprout lines) first, then shorten `[Design]`. A product title over 140 shortens `[Design]`.
+- **Alt text:** `[Design] rave sprout|rave kandi charm [color] — [brief descriptor]`. Bundles use `[Design] rave sprout bundle|kandi charm bundle — [brief descriptor]`. Never pack sizes or names. A photo showing a bracelet says "shown on a display bracelet (not included)."
 
 ---
 
@@ -106,10 +89,10 @@ Every pack above 1 includes a **FREE bonus of the same product**: Sprouts get bo
 
 | Line | Pack names | Default prices | Default inventory |
 |---|---|---|---|
-| Sprout | `[Color] / 1 Pack` · `[Color] / 10 Pack + (1 FREE)` · `20 Pack + (2 FREE)` · `30 Pack + (3 FREE)` | $3 / $28 / $55 / $81 | 50 / 20 / 10 / 5 |
-| Kandi Charm | `[Color] / 10 Pack + (1 FREE)` · `20 Pack + (2 FREE)` · `30 Pack + (3 FREE)` (**no 1 Pack**) | $23 / $45 / $67 | 20 / 10 / 5 per color |
-| Sprout Bundle | "Pack" → `10 Pack + (1 FREE)`… or "Sprout Bundle" → `10 Sprout Bundle + (1 FREE)`… (from the prompt) | From the prompt | 100 / 50 / 30 |
-| Kandi Bundle | Always "Pack": `10 Pack + (1 FREE)` · `20 Pack + (2 FREE)` · `30 Pack + (3 FREE)` | From the prompt | 100 / 50 / 30 |
+| Sprout | `[Color] / 1 Pack` · `[Color] / 10 Pack + (1 FREE)` · `20 Pack + (2 FREE)` · `30 Pack + (3 FREE)` | $3 / $28 / $55 / $81 | 200 / 100 / 50 / 10 |
+| Kandi Charm | `[Color] / 10 Pack + (1 FREE)` · `20 Pack + (2 FREE)` · `30 Pack + (3 FREE)` (**no 1 Pack**) | $23 / $45 / $67 | 100 / 50 / 10 per color |
+| Sprout Bundle | "Pack" → `10 Pack + (1 FREE)`… or "Sprout Bundle" → `10 Sprout Bundle + (1 FREE)`… (from the prompt) | From the prompt | 100 / 50 / 10 |
+| Kandi Bundle | Always "Pack": `10 Pack + (1 FREE)` · `20 Pack + (2 FREE)` · `30 Pack + (3 FREE)` | From the prompt | 100 / 50 / 10 |
 
 - Sprout: Multicolor never gets a 1 Pack. 25/40/50/100-pack tiers are legacy or wholesale only. Both apply unless the prompt says otherwise.
 - `… Pack + (1 FREE)` names join the **1 FREE Sprout** collection; `… Sprout Bundle + (1 FREE)` names stay out.
@@ -128,8 +111,8 @@ Variant options are **linked to metaobjects**, not typed as free text. Every liv
 
 - Create each option as a linked option, and point every value at an existing entry by exact display name. The product-level Color and Pack Size metafields then fill automatically. **Confirm they did** before handoff.
 - **Missing entry → create it.** Then add it to `Platform_Reference.xlsx` and list it under "New entries" in the build summary.
-  - **Color:** Label = the color name; Base color = the closest Shopify base color(s); Base pattern = `Solid` (use `Rainbow` for Multicolor or Rainbow). Assign a new 4-letter color code and add a row to Pricing Master → Standard Color Codes.
-  - **Pack Size:** Label = the exact variant name. Add a row to Pricing Master → Pack Sizes.
+  - **Color:** Label = the color name; Base color = the closest Shopify base color(s); Base pattern = `Solid` (use `Rainbow` for Multicolor or Rainbow). Assign a new 4-letter color code and add a row to the `Pricing - Colors` tab.
+  - **Pack Size:** Label = the exact variant name. Add a row to the `Pricing - Pack Sizes` tab.
 - The **1 FREE Sprout** smart collection matches on the `10 Pack + (1 FREE)` entry. Never substitute a lookalike.
 
 ---
@@ -152,9 +135,9 @@ Variant options are **linked to metaobjects**, not typed as free text. Every liv
 - **Claude generates the code** unless the prompt supplies one:
   - Artist or festival already has a series → next number in that series (`GRZ6` → `GRZ7`, `EXC12` → `EXC13`, `ZDL14` → `ZDL15`).
   - New artist, festival or bundle → 4 letters + `1` (`HLWN1`), built from the name's distinctive consonants (Kaskade → `KSKD1`).
-  - A design that fits two series (artist at a festival) → whichever name leads the product title.
-  - Before using a code, check `Platform_Reference.xlsx` → SKU Convention **and** live Shopify SKUs for clashes.
-- **Color codes:** only codes in Pricing Master → Standard Color Codes. Never use the codes flagged there as typos (`MTCL`, `WHTE`, `YLTR`, `PKWH`).
+  - A design that fits two series (artist at a festival) → the series named first in the prompt.
+  - Before using a code, check `Platform_Reference.xlsx` → `SKU - Codes` and `SKU - Bank` **and** live Shopify SKUs for clashes.
+- **Color codes:** only codes in the `Pricing - Colors` tab. Never use the codes flagged there as typos (`MTCL`, `WHTE`, `YLTR`, `PKWH`).
 
 ---
 
@@ -170,18 +153,21 @@ Variant options are **linked to metaobjects**, not typed as free text. Every liv
 
 ## Etsy Tags (13 max · ≤20 chars each)
 
-- **No two tags may share a first word.** This rule wins over everything else, including the tag bank's "apply all 10 Always."
-- **Fill in this order:** Always tags (as many as the first-word rule allows) → prompt focus keywords → Rotate/Specific → listing-specific. Always **13** in total.
+- **Source:** `Platform_Reference.xlsx` → `Keywords - Master`, `Keywords - Sprout Tags` and `Keywords - Kandi Tags`. Use only rows with Publishing Status = **Yes** and Etsy Tag Eligible = **Yes**, whose Product Type matches the line (Sprouts or Both for Sprout lines; Kandi or Both for Kandi lines). Never use Hold rows, and never an artist name.
+- **No two tags may share a first word.** This rule wins over everything else.
+- **Fill in this order:** 1–2 tags from the line's tag tab (`Keywords - Sprout Tags` is a bank to pick from, not a set; `Keywords - Kandi Tags` is the Kandi starting set) → prompt focus keywords → High-priority master rows → Medium rows that fit the exact design. Always **13** in total.
 - **Write them to Shopify.** Set the product's `tags` field to exactly these 13 (replace, never append) when creating or updating the draft. Then **read the product back and confirm all 13 are there** before handoff. Tags that appear only in the build summary are not done.
-- **Kandi:** drop clip-specific tags (`rave sprout`, `sprout clip`) and never use `kandi bracelet`. **Tag bank:** `Platform_Reference.xlsx` → Etsy Tag Bank; never reuse Retired tags.
+- **Kandi:** no sprout or clip keywords. `kandi bracelet` and `kandi bracelet bead` are fine as tags (never `kandi bracelet` in the title). **Sprouts:** no kandi-only keywords. `Keywords - Legacy` holds the retired tags for reference only.
 
 ---
 
 ## Deliverables
 
 1. **Shopify draft** per listing (status DRAFT), with the 13 tags in its Tags field.
-2. **Build summary `.docx`** per listing or batch, following the `Seven_Stars_*_Build_Summary.docx` layout: at-a-glance (including the Product Type decision and generated code), title/SEO with character counts, description, variants/SKUs/prices, images + alt text, metafields, Etsy tags, **new entries created**, **flags**, checklist result.
-3. **`Platform_Reference.xlsx` updates:** Product Roster and SKU Convention tabs for every listing, plus Color Codes or Pack Sizes rows for any new entry. The **Notes column is append-only**.
+2. **Build summary `.docx`** per listing or batch, saved in `Build_Summaries/` (never the folder root), named `[Listing or Batch]_Build_Summary.docx`. Follow the `Build_Summaries/Seven_Stars_*_Build_Summary.docx` layout: at-a-glance (including the Product Type decision and generated code), title/SEO with character counts, description, variants/SKUs/prices, images + alt text, metafields, Etsy tags, **new entries created**, **flags**, checklist result.
+3. **`Platform_Reference.xlsx` updates:** `Product Roster`, `SKU - Codes` and `SKU - Bank` for every listing, plus `Pricing - Colors` or `Pricing - Pack Sizes` rows for any new entry. The **Notes column is append-only**.
+   - **Layout is fixed.** Each tab holds one Excel Table: row 1 title, row 2 note, row 3 headers, data from row 4. Add new rows directly under the table's last row and extend the table range to include them (openpyxl: update `ws.tables[name].ref`). Copy number format, font and alignment from the row above.
+   - Never add fills, bold, merged cells, blank rows, section-label rows, a second table on a tab, or new tabs; never change rows 1–3 or column widths. Status colors and row banding come from the table style and conditional formatting.
 4. **Revisions** after the first build-out: correct inline in chat. Don't regenerate the doc unless asked.
 
 ---
@@ -198,8 +184,8 @@ Variant options are **linked to metaobjects**, not typed as free text. Every liv
 ## Pre-Handoff Checklist
 
 - [ ] Correct template for the line; body verbatim; only the documented slots changed
-- [ ] Sprout lines: 5 bullets, CTA, no signoff; Sprout festivals = Electric Forest, Lost Lands, Seven Stars; K-Hole and Sprocket bolded; focus keyword in first 160 chars
-- [ ] Kandi lines: Features + Product Details intact; colors, packs, dimensions and weight filled from the prompt; "Includes: Kandi charms ONLY" line present; nothing implies a bracelet is included
+- [ ] Correct `-v2` template; Features and Product Details intact; only `[Colors]` and Dimensions filled; Kandi "Includes:" line present; nothing implies a bracelet is included
+- [ ] Title is the template line with `[Design]` filled; no artist, festival or event names anywhere customer-facing
 - [ ] No disclaimer sentences, no "official," no "The Beat Drop," no banned words; `<li>` only
 - [ ] Title / SEO title / meta follow the line's pattern and limits
 - [ ] Product Type derived and stated; Category correct for the line; theme template set
@@ -208,7 +194,7 @@ Variant options are **linked to metaobjects**, not typed as free text. Every liv
 - [ ] SKUs follow convention or match live SKUs; generated code checked for clashes
 - [ ] Every image uploaded with original filename and alt text; every variant linked
 - [ ] 13 Etsy tags, no shared first words, **written to the Shopify Tags field and confirmed by reading the product back**
-- [ ] Status DRAFT · build summary delivered · Roster, SKU and Notes updated
+- [ ] Status DRAFT · build summary saved in `Build_Summaries/` · Roster, SKU and Notes updated
 
 ---
 
@@ -217,15 +203,15 @@ Variant options are **linked to metaobjects**, not typed as free text. Every liv
 | File | Purpose |
 |---|---|
 | `the-beat-drop-brand-identity.md` | Voice rationale, audience, positioning. Read first |
-| `Gold_Standard_Sprout_Listing.docx` | **Sole source** of Sprout copy |
-| `Gold_Standard_Sprout_Bundle_Listing.docx` | **Sole source** of Sprout Bundle copy |
-| `Gold_Standard_Kandi_Charm_Listing.docx` | **Sole source** of Kandi Charm copy and title pattern |
-| `Gold_Standard_Kandi_Bundle_Listing.docx` | **Sole source** of Kandi Bundle copy and title pattern |
+| `Gold_Standard_Sprout_Listing-v2.docx` | **Sole source** of Sprout copy and title pattern |
+| `Gold_Standard_Sprout_Bundle_Listing-v2.docx` | **Sole source** of Sprout Bundle copy and title pattern |
+| `Gold_Standard_Kandi_Charm_Listing-v2.docx` | **Sole source** of Kandi Charm copy and title pattern |
+| `Gold_Standard_Kandi_Bundle_Listing-v2.docx` | **Sole source** of Kandi Bundle copy and title pattern |
 | `Intake_Spec_Single_Listing.md` | The four prompt templates |
 | `BATCH_LISTING.md` | Batch prompt + execution steps |
-| `Platform_Reference.xlsx` | Live catalog source of truth: SKU bank, Product Roster, Pricing Master (prices, Color Codes, Pack Sizes), Category Mapping, Etsy Tag Bank, Keyword Bank, character limits |
-| `Seven_Stars_*_Build_Summary.docx` | Build summary layout reference only (their copy predates the current templates) |
+| `Platform_Reference.xlsx` | Live catalog source of truth. Tabs: Field Mapping, Character Limits, Category Mapping, `Keywords - Master`, `Keywords - Sprout Tags`, `Keywords - Kandi Tags`, `Keywords - Legacy`, `SKU - Rules`, `SKU - Codes`, `SKU - Bank`, Product Roster, `Pricing - Packs`, `Pricing - Colors`, `Pricing - Pack Sizes`, Shorthand Map, Design Library |
+| `Build_Summaries/` | Every build summary `.docx`. `Seven_Stars_*_Build_Summary.docx` there is the layout reference only (its copy predates the current templates) |
 
-**Retired tone references:** GRiZ/Griztronics, earlier Zeds Dead drafts, and the Keyword Bank note pointing to the GRiZ listing. The four `.docx` files win.
+**Retired:** the pre-v2 templates (in `_Archive/`), GRiZ/Griztronics and earlier Zeds Dead drafts. The four `-v2.docx` files win.
 
 **Keeping in sync:** if a `.docx` change ever seems to require editing this file too, template wording has leaked in here. Remove it.
