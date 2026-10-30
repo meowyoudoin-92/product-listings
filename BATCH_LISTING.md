@@ -19,7 +19,7 @@ Each block's first line names the product line: **Sprout**, **Sprout Bundle**, *
 | Line | Required |
 |---|---|
 | Sprout | Name; Design; one `Color: filename` line per color |
-| Sprout Bundle | Name; Design; pack naming (Pack / Sprout Bundle); prices; featured image |
+| Sprout Bundle | Name; Design; prices; featured image |
 | Kandi Charm | Name; Design; one `Color: filename` line per color; packs & prices (pre-filled defaults) |
 | Kandi Bundle | Name; Design; prices; featured image |
 
@@ -65,16 +65,16 @@ Each block's first line names the product line: **Sprout**, **Sprout Bundle**, *
 
 | Field | Default |
 |---|---|
-| Sprout packs & prices | 1/10/20/30 Pack (Multicolor 10/20/30 only) · $3 / $28 / $55 / $81 |
+| Sprout packs & prices | 1/11/22/33 Pack (Multicolor 11/22/33 only) · $3 / $28 / $55 / $81 |
 | Sprout inventory | 200 / 100 / 50 / 10 |
-| Kandi Charm packs & prices | 10/20/30 Pack, **no 1 Pack** · $23 / $45 / $67 |
+| Kandi Charm packs & prices | 11/22/33 Pack, **no 1 Pack** · $23 / $45 / $67 |
 | Kandi Charm inventory | 100 / 50 / 10 per color |
 | Bundle inventory (Sprout & Kandi) | 100 / 50 / 10 |
-| Kandi Bundle pack naming | Always "Pack" |
+| Pack names (all lines) | 11 Pack · 22 Pack · 33 Pack (Sprout also 1 Pack) |
 | SKU code | Next in the existing series, or a new 4 letters + `1` |
 | Compare-at price | Blank, always |
 | Product Type | Derived: Kandi → Kandi Beads · festival subject → Festival Sprouts · else Artist Sprout |
-| Category | Sprout lines: Hair Pins, Claws & Clips · Kandi lines: Charms |
+| Category | Sprout lines: Hair Pins, Claws & Clips · Kandi lines: Beads (Embellishments & Trims) |
 | Theme template | `gp-template-581878106541785827` |
 | Status | DRAFT, always |
 

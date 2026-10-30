@@ -21,7 +21,7 @@
 5. **Copy follows the line's gold standard** word for word, except the wording that describes the artwork, which is rewritten for the listing's Design (see Gold Standards & Copy).
 6. **The prompt beats the defaults.** If the prompt specifies a variant structure, price, inventory or code that differs from this file, build exactly what the prompt says.
 7. **Live SKUs beat convention.** If an existing live SKU conflicts with the SKU convention, match it. Never "fix" it silently.
-8. **Required from the prompt (no defaults exist):** the product line; Design; the color-to-image map (Sprout, Kandi Charm) or the featured image (bundles); prices for Sprout Bundles and Kandi Bundles; pack naming for Sprout Bundles. A Design that contains an artist, festival or event name counts as missing. If any is missing, ask **once, up front, for the whole batch**. Never stop mid-build.
+8. **Required from the prompt (no defaults exist):** the product line; Design; the color-to-image map (Sprout, Kandi Charm) or the featured image (bundles); prices for Sprout Bundles and Kandi Bundles. A Design that contains an artist, festival or event name counts as missing. If any is missing, ask **once, up front, for the whole batch**. Never stop mid-build.
 9. **Everything else: don't block.** Use the documented default or Claude's own call, finish the build, and record the decision in the build summary and the Product Roster Notes column.
 
 ---
@@ -32,8 +32,8 @@
 |---|---|---|---|---|
 | Sprout | Charm + K-Hole + Sprocket + metal spring clip, one design | `Neon Retro Rave Sprout Hair Clips \| Festival Hair Clips` | Hair Pins | Color + Pack Size |
 | Sprout Bundle | Same build, themed multi-design set, no colors | `Neon Retro Rave Sprout Bundle \| Festival Hair Clip Set` | Hair Pins | Pack Size |
-| Kandi Charm | Clip-less charm with K-Hole bead hole and Sprocket spring pocket, one design | `Neon Retro TV Rave Kandi Charm \| 3D Printed Bead` | Charms | Color + Pack Size |
-| Kandi Bundle | Same charm build, variety of designs, no colors | `Neon Retro Rave Kandi Bundle \| Festival Bead Charms` | Charms | Pack Size |
+| Kandi Charm | Clip-less charm with K-Hole bead hole and Sprocket spring pocket, one design | `Neon Retro TV Rave Kandi Charm \| 3D Printed Bead` | Beads | Color + Pack Size |
+| Kandi Bundle | Same charm build, variety of designs, no colors | `Neon Retro Rave Kandi Bundle \| Festival Bead Charms` | Beads | Pack Size |
 
 **Product Type: Claude works it out.** Use the exact live spelling:
 - Kandi Charm or Kandi Bundle → `Kandi Beads`
@@ -44,7 +44,7 @@ State the choice in the build summary. `Rave Sprout` is a legacy type; never ass
 
 **Collections: Claude assigns none.** Smart collections pick listings up from Product Type and Pack Size. The owner adds manual collections before publishing.
 
-**Category paths:** Hair Pins = `Apparel & Accessories > Clothing Accessories > Hair Accessories > Hair Pins, Claws & Clips` · Charms = `Apparel & Accessories > Jewelry > Charms & Pendants > Charms`
+**Category paths:** Hair Pins = `Apparel & Accessories > Clothing Accessories > Hair Accessories > Hair Pins, Claws & Clips` · Beads = `Arts & Entertainment > Hobbies & Creative Arts > Arts & Crafts > Art & Crafting Materials > Embellishments & Trims > Beads`
 
 ---
 
@@ -107,17 +107,17 @@ The TikTok sync app sends two product metafields to TikTok Shop. Fill both on ev
 
 ## Variants, Pricing & Inventory
 
-Every pack above 1 includes a **FREE bonus of the same product**: Sprouts get bonus sprouts, Kandi gets bonus kandi charms. The `+ (N FREE)` pack names say it; copy never promises a different product as the bonus.
+Packs are **11, 22 and 33**: 10, 20 or 30 plus 1, 2 or 3 free of the same product (bonus sprouts for Sprouts, bonus charms for Kandi). Copy never promises a different product as the bonus.
 
 | Line | Pack names | Default prices | Default inventory |
 |---|---|---|---|
-| Sprout | `[Color] / 1 Pack` · `[Color] / 10 Pack + (1 FREE)` · `20 Pack + (2 FREE)` · `30 Pack + (3 FREE)` | $3 / $28 / $55 / $81 | 200 / 100 / 50 / 10 |
-| Kandi Charm | `[Color] / 10 Pack + (1 FREE)` · `20 Pack + (2 FREE)` · `30 Pack + (3 FREE)` (**no 1 Pack**) | $23 / $45 / $67 | 100 / 50 / 10 per color |
-| Sprout Bundle | "Pack" → `10 Pack + (1 FREE)`… or "Sprout Bundle" → `10 Sprout Bundle + (1 FREE)`… (from the prompt) | From the prompt | 100 / 50 / 10 |
-| Kandi Bundle | Always "Pack": `10 Pack + (1 FREE)` · `20 Pack + (2 FREE)` · `30 Pack + (3 FREE)` | From the prompt | 100 / 50 / 10 |
+| Sprout | `[Color] / 1 Pack` · `[Color] / 11 Pack` · `22 Pack` · `33 Pack` | $3 / $28 / $55 / $81 | 200 / 100 / 50 / 10 |
+| Kandi Charm | `[Color] / 11 Pack` · `22 Pack` · `33 Pack` (**no 1 Pack**) | $23 / $45 / $67 | 100 / 50 / 10 per color |
+| Sprout Bundle | `11 Pack` · `22 Pack` · `33 Pack` | From the prompt | 100 / 50 / 10 |
+| Kandi Bundle | `11 Pack` · `22 Pack` · `33 Pack` | From the prompt | 100 / 50 / 10 |
 
 - Sprout: Multicolor never gets a 1 Pack. 25/40/50/100-pack tiers are legacy or wholesale only. Both apply unless the prompt says otherwise.
-- `… Pack + (1 FREE)` names join the **1 FREE Sprout** collection; `… Sprout Bundle + (1 FREE)` names stay out.
+- **Legacy pack names** (`10 Pack + (1 FREE)`, `10 Sprout Bundle + (1 FREE)` and the like) stay on existing listings unless the prompt says to switch them. Never use them on new builds.
 - **Compare-at price:** always blank.
 
 ---
@@ -135,25 +135,25 @@ Variant options are **linked to metaobjects**, not typed as free text. Every liv
 - **Missing entry → create it.** Then add it to `Platform_Reference.xlsx` and list it under "New entries" in the build summary.
   - **Color:** Label = the color name; Base color = the closest Shopify base color(s); Base pattern = `Solid` (use `Rainbow` for Multicolor or Rainbow). Assign a new 4-letter color code and add a row to the `Pricing - Colors` tab.
   - **Pack Size:** Label = the exact variant name. Add a row to the `Pricing - Pack Sizes` tab.
-- The **1 FREE Sprout** smart collection matches on the `10 Pack + (1 FREE)` entry. Never substitute a lookalike.
 
 ---
 
 ## Category Metafields
 
-| Metafield | Sprout lines (Hair Pins) | Kandi lines (Charms) |
+| Metafield | Sprout lines (Hair Pins) | Kandi lines (Beads) |
 |---|---|---|
-| Material | Polylactic Acid (PLA), Plastic, Metal | — (not in Charms) |
-| Jewelry material | — | **Polylactic Acid (PLA)** only (create the entry with base value Plastic if missing) |
-| Age group | Adults | Adults |
-| Construction | Solid | — (not in Charms) |
-| Target gender | Unisex | Unisex |
+| Material | Polylactic Acid (PLA), Plastic, Metal | — (not in Beads) |
+| Jewelry material | — | **Polylactic Acid (PLA)** only |
+| Embellishment/Trim material | — | Plastic |
+| Age group | Adults | — (not in Beads) |
+| Construction | Solid | — |
+| Target gender | Unisex | — (not in Beads) |
 
 ---
 
 ## SKU Convention
 
-- **Format:** `[CODE]_[COLOR]_[PCK#]` (Sprout, Kandi Charm). Bundles: `[CODE]_[PCK#]`. Underscore separator only. ≤50 chars. `PCK#` is the pack number before the bonus (`10 Pack + (1 FREE)` → `PCK10`).
+- **Format:** `[CODE]_[COLOR]_[PCK#]` (Sprout, Kandi Charm). Bundles: `[CODE]_[PCK#]`. Underscore separator only. ≤50 chars. `PCK#` is the number in the pack name (`11 Pack` → `PCK11`). Existing listings keep their `PCK10/20/30` SKUs (rule 7).
 - **Claude generates the code** unless the prompt supplies one:
   - Artist or festival already has a series → next number in that series (`GRZ6` → `GRZ7`, `EXC12` → `EXC13`, `ZDL14` → `ZDL15`).
   - New artist, festival or bundle → 4 letters + `1` (`HLWN1`), built from the name's distinctive consonants (Kaskade → `KSKD1`).

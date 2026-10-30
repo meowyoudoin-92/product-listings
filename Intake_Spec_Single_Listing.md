@@ -28,14 +28,14 @@ Colors & images (IMGs/) — one line per color:
 Multicolor: [filename]
 
 Optional — delete any line you don't need:
-Variant structure: [e.g. individual colors 1 Pack only; Multicolor 10/20/30 Pack]
-Pricing: 1 → $[ ]  10 → $[ ]  20 → $[ ]  30 → $[ ]
+Variant structure: [e.g. individual colors 1 Pack only; Multicolor 11/22/33 Pack]
+Pricing: 1 → $[ ]  11 → $[ ]  22 → $[ ]  33 → $[ ]
 Etsy tags: [tag], [tag], [tag]
 Focus keywords: [keyword], [keyword]
 SKU code: [code]
 ```
 
-Blank = 1/10/20/30 Pack (Multicolor 10/20/30 only) at $3 / $28 / $55 / $81; inventory 200 / 100 / 50 / 10; SKU code generated.
+Blank = 1/11/22/33 Pack (Multicolor 11/22/33 only) at $3 / $28 / $55 / $81; inventory 200 / 100 / 50 / 10; SKU code generated.
 
 ---
 
@@ -45,20 +45,19 @@ Blank = 1/10/20/30 Pack (Multicolor 10/20/30 only) at $3 / $28 / $55 / $81; inve
 Create a draft Shopify listing for [ARTIST or FESTIVAL NAME] [Festival — delete for an artist] Sprout Bundle.
 
 Design: [plain description of the set, no artist or festival names]
-Pack naming: [Pack / Sprout Bundle]
-Pricing: 10 → $[ ]  20 → $[ ]  30 → $[ ]
+Pricing: 11 → $[ ]  22 → $[ ]  33 → $[ ]
 
 Images (IMGs/):
 Featured image: [filename]
 
 Optional — delete any line you don't need:
-Inventory: 10 → [ ]  20 → [ ]  30 → [ ]
+Inventory: 11 → [ ]  22 → [ ]  33 → [ ]
 Etsy tags: [tag], [tag], [tag]
 Focus keywords: [keyword], [keyword]
 SKU code: [code]
 ```
 
-**Pack** gives "10 Pack + (1 FREE)" and joins the 1 FREE Sprout collection; **Sprout Bundle** gives "10 Sprout Bundle + (1 FREE)" and stays out. Blank inventory = 100 / 50 / 10.
+Packs are 11 Pack, 22 Pack and 33 Pack. Blank inventory = 100 / 50 / 10.
 
 ---
 
@@ -75,10 +74,10 @@ Colors & images (IMGs/) — one line per color:
 [Color]: [filename]
 Multicolor: [filename]
 
-Packs & pricing: 10 → $23  20 → $45  30 → $67
+Packs & pricing: 11 → $23  22 → $45  33 → $67
 
 Optional — delete any line you don't need:
-Inventory per color: 10 → [ ]  20 → [ ]  30 → [ ]
+Inventory per color: 11 → [ ]  22 → [ ]  33 → [ ]
 Etsy tags: [tag], [tag], [tag]
 Focus keywords: [keyword], [keyword]
 SKU code: [code]
@@ -94,19 +93,19 @@ Pre-filled prices are the defaults; edit them only if this design is different. 
 Create a draft Shopify listing for [BUNDLE or FESTIVAL NAME] Kandi Bundle.
 
 Design: [plain description of the set, no artist or festival names]
-Packs & pricing: 10 → $[ ]  20 → $[ ]  30 → $[ ]
+Packs & pricing: 11 → $[ ]  22 → $[ ]  33 → $[ ]
 
 Images (IMGs/):
 Featured image: [filename]
 
 Optional — delete any line you don't need:
-Inventory: 10 → [ ]  20 → [ ]  30 → [ ]
+Inventory: 11 → [ ]  22 → [ ]  33 → [ ]
 Etsy tags: [tag], [tag], [tag]
 Focus keywords: [keyword], [keyword]
 SKU code: [code]
 ```
 
-Pack names are always "10 Pack + (1 FREE)" style. Blank inventory = 100 / 50 / 10.
+Packs are 11 Pack, 22 Pack and 33 Pack. Blank inventory = 100 / 50 / 10.
 
 ---
 
@@ -121,7 +120,7 @@ Optional — delete any line you don't need:
 Colors & images (IMGs/) — one line per color:
 [Color]: [filename]
 Featured image: [filename]
-Pricing: 10 → $[ ]  20 → $[ ]  30 → $[ ]
+Pricing: 11 → $[ ]  22 → $[ ]  33 → $[ ]
 Etsy tags: [tag], [tag], [tag]
 Leave as is: [fields not to touch, e.g. alt text, tags]
 Also change: [anything else]
@@ -153,4 +152,4 @@ Collections are left for you to add before publishing.
 - A build summary `.docx` in `Build_Summaries/`: Product Type and code chosen, character counts, any new Color or Pack Size entries, flags to review
 - `Platform_Reference.xlsx` updated: Roster, SKU bank, Notes, and any new Color Code or Pack Size rows
 
-If a required line is missing (Design, the color/image lines or featured image, bundle prices, Sprout Bundle pack naming), Claude asks once before starting.
+If a required line is missing (Design, the color/image lines or featured image, bundle prices), Claude asks once before starting.
