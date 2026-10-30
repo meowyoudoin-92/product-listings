@@ -36,7 +36,7 @@ Each block's first line names the product line: **Sprout**, **Sprout Bundle**, *
    - Every image named in the prompt exists in `IMGs/`.
    - Required fields are filled.
 2. **For each listing:**
-   1. Work out the Product Type (`Kandi Beads` / `Festival Sprouts` / `Artist Sprout`), the template, and the Category for the line.
+   1. Work out the Product Type (`Kandi Beads` / `Sprout Bundle` / `Festival Sprouts` / `Artist Sprout`), the template, and the Category for the line.
    2. Generate the SKU code (next in series, or a new 4 letters + digit) and check it for clashes.
    3. Write the copy from the line's gold standard, changing only the artwork wording to fit the Design.
    4. Build the Shopify draft:
@@ -73,7 +73,7 @@ Each block's first line names the product line: **Sprout**, **Sprout Bundle**, *
 | Pack names (all lines) | 11 Pack · 22 Pack · 33 Pack (Sprout also 1 Pack) |
 | SKU code | Next in the existing series, or a new 4 letters + `1` |
 | Compare-at price | Blank, always |
-| Product Type | Derived: Kandi → Kandi Beads · festival subject → Festival Sprouts · else Artist Sprout |
+| Product Type | Derived: Kandi → Kandi Beads · Sprout Bundle → Sprout Bundle · festival subject → Festival Sprouts · else Artist Sprout |
 | Category | Sprout lines: Hair Pins, Claws & Clips · Kandi lines: Beads (Embellishments & Trims) |
 | Theme template | `gp-template-581878106541785827` |
 | Status | DRAFT, always |

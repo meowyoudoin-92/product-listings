@@ -37,6 +37,7 @@
 
 **Product Type: Claude works it out.** Use the exact live spelling:
 - Kandi Charm or Kandi Bundle → `Kandi Beads`
+- Sprout Bundle → `Sprout Bundle`
 - A festival or event is the subject → `Festival Sprouts`
 - Everything else → `Artist Sprout`
 
