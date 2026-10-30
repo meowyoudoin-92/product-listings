@@ -18,10 +18,10 @@ Each block's first line names the product line: **Sprout**, **Sprout Bundle**, *
 
 | Line | Required |
 |---|---|
-| Sprout | Name; Design; Dimensions (in); one `Color: filename` line per color |
-| Sprout Bundle | Name; Design; Dimensions (in); pack naming (Pack / Sprout Bundle); prices; featured image |
-| Kandi Charm | Name; Design; Dimensions (in); one `Color: filename` line per color; packs & prices (pre-filled defaults) |
-| Kandi Bundle | Name; Design; Dimensions (in); prices; featured image |
+| Sprout | Name; Design; one `Color: filename` line per color |
+| Sprout Bundle | Name; Design; pack naming (Pack / Sprout Bundle); prices; featured image |
+| Kandi Charm | Name; Design; one `Color: filename` line per color; packs & prices (pre-filled defaults) |
+| Kandi Bundle | Name; Design; prices; featured image |
 
 **Images:** only the variant images are listed. Every other file in `IMGs/` that shares a listing's filename prefix is uploaded automatically.
 
@@ -32,13 +32,13 @@ Each block's first line names the product line: **Sprout**, **Sprout Bundle**, *
 ## Section 2 — Execution (Claude)
 
 1. **Check inputs.**
-   - `CLAUDE.md`, the four gold-standard `-v2.docx` files and `Platform_Reference.xlsx` are present and current.
+   - `CLAUDE.md`, the four Neon Retro gold-standard `.docx` files and `Platform_Reference.xlsx` are present and current.
    - Every image named in the prompt exists in `IMGs/`.
    - Required fields are filled.
 2. **For each listing:**
    1. Work out the Product Type (`Kandi Beads` / `Festival Sprouts` / `Artist Sprout`), the template, and the Category for the line.
    2. Generate the SKU code (next in series, or a new 4 letters + digit) and check it for clashes.
-   3. Copy the correct `-v2.docx` verbatim. Fill only `[Design]` (title), `[Colors]` and Dimensions.
+   3. Write the copy from the line's gold standard, changing only the artwork wording to fit the Design.
    4. Build the Shopify draft:
       - title / SEO / meta from the line's pattern
       - HTML body
@@ -48,8 +48,9 @@ Each block's first line names the product line: **Sprout**, **Sprout Bundle**, *
       - category metafields for the line
       - status **DRAFT**
    5. Create any missing Color or Pack Size entries, and log them.
-   6. Pick 13 Etsy tags, write them to the product's Shopify **Tags** field, and read the product back to confirm all 13 are there.
-   7. Run CLAUDE.md's Pre-Handoff Checklist.
+   6. Pick 13 Etsy tags (the prompt's tags first), write them to the product's Shopify **Tags** field, and read the product back to confirm all 13 are there.
+   7. Write the TikTok Title and TikTok Description metafields from the line's gold standard, and read them back.
+   8. Run CLAUDE.md's Pre-Handoff Checklist.
 3. **Update `Platform_Reference.xlsx`:**
    - Product Roster, `SKU - Codes` and `SKU - Bank` for every listing
    - `Pricing - Colors` / `Pricing - Pack Sizes` for any new entry
